@@ -4,9 +4,6 @@ All notable changes to this project are documented here. The first `## [x.y.z]` 
 
 ## [Unreleased]
 
-### Fixed
-- The What's new window shows released versions only, without the file header or unreleased notes.
-
 ## [0.1.0] - 2026-10-23
 
 ### Added
