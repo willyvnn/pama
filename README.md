@@ -59,3 +59,7 @@ git tag v0.1.0 && git push origin v0.1.0
 ## Versioning
 
 The app version comes from the first `## [x.y.z]` heading in [CHANGELOG.md](CHANGELOG.md). Add changes under `[Unreleased]`; a release promotes them to a new version heading.
+
+## License
+
+[MIT](LICENSE). Report security issues privately as described in [SECURITY.md](SECURITY.md).
