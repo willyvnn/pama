@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: ./build.sh
 
-      - uses: actions/attest-build-provenance@v2
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-path: |
             artifacts/win-x64/Pama.exe
