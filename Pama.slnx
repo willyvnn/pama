@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Pama.Core/Pama.Core.csproj" />
+    <Project Path="src/Pama.Desktop/Pama.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Pama.Core.Tests/Pama.Core.Tests.csproj" />
+  </Folder>
+</Solution>

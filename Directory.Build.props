@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- CHANGELOG.md is the single source of the version: the first released "## [x.y.z]" heading -->
+  <PropertyGroup>
+    <ChangelogPath>$(MSBuildThisFileDirectory)CHANGELOG.md</ChangelogPath>
+    <ChangelogVersion>$([System.Text.RegularExpressions.Regex]::Match($([System.IO.File]::ReadAllText('$(ChangelogPath)')), '(?&lt;=^## \[)\d+\.\d+\.\d+(?=\])', RegexOptions.Multiline).Value)</ChangelogVersion>
+    <Version Condition="'$(ChangelogVersion)' != ''">$(ChangelogVersion)</Version>
+  </PropertyGroup>
+</Project>

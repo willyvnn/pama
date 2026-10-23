@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pama.Core\Pama.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Pama</AssemblyName>
+    <RootNamespace>Pama.Desktop</RootNamespace>
+    <ApplicationIcon>Assets\pama.ico</ApplicationIcon>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <!-- Required by the LibraryImport source generator in NativeMethods.cs; no hand-written unsafe code -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Small UI app: no background GC thread, and a GC that trades a little CPU for a smaller heap -->
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <TieredPGO>false</TieredPGO>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.GC.ConserveMemory" Value="7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\pama.ico" />
+    <EmbeddedResource Include="$(ChangelogPath)" LogicalName="CHANGELOG.md" />
+  </ItemGroup>
+
+</Project>

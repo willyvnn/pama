@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Vector twin of Assets/pama.ico, crisp at any DPI; geometry mirrors tools/make_icon.py -->
+    <LinearGradientBrush x:Key="LogoBackground" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#4F45E6" Offset="0" />
+        <GradientStop Color="#8A45D9" Offset="1" />
+    </LinearGradientBrush>
+
+    <DrawingImage x:Key="Logo">
+        <DrawingImage.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="{StaticResource LogoBackground}">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="0,0,100,100" RadiusX="22" RadiusY="22" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Geometry="M 34.5,47 V 40 A 15.5,15.5 0 0 1 65.5,40 V 47">
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="White" Thickness="9" />
+                    </GeometryDrawing.Pen>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="White">
+                    <GeometryDrawing.Geometry>
+                        <RectangleGeometry Rect="27,45,46,34" RadiusX="5" RadiusY="5" />
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+                <GeometryDrawing Brush="{StaticResource LogoBackground}"
+                                 Geometry="M 45.5,58.5 A 4.5,4.5 0 1 1 52.2,62.4 V 70 H 47.8 V 62.4 A 4.5,4.5 0 0 1 45.5,58.5 Z" />
+                <!-- Sparkle = "generate"; parabolic arms match the |x|^0.5 + |y|^0.5 = r^0.5 shape in make_icon.py -->
+                <GeometryDrawing Brush="White"
+                                 Geometry="M 80,7 Q 80,20 93,20 Q 80,20 80,33 Q 80,20 67,20 Q 80,20 80,7 Z
+                                           M 66,7 Q 66,12 71,12 Q 66,12 66,17 Q 66,12 61,12 Q 66,12 66,7 Z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>
